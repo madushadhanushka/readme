@@ -1,0 +1,23 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+#html_out {
+ width: 600px;
+ overflow: auto;
+ border: 1px solid #ccc;
+ height: 870px;
+ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#readme_out {
+	float: left;
+}
+#input_form {
+    width: 500px;
+    float: left;
+    height: 870px;
+    overflow: auto;
+}
+.content_padding {
+    padding: 10px;
+}
