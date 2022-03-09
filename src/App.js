@@ -54,6 +54,8 @@ class App extends Component {
             .then(
                 (schema) => {
                     //console.log(template, schema);
+                    schema.title = "Readme Inputs";
+                    schema.description = "Insert your details in here to generate Readme file";
                     this.updateWithMustache(template, schema);
 
                 },
