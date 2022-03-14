@@ -5,6 +5,7 @@ import './styles.css';
 class App extends Component {
 
     mustacheTemplate = "";
+    templateList = {};
 
     constructor(props) {
         super(props);
@@ -115,26 +116,36 @@ class App extends Component {
             <div>
                 <div className="container">
                     <div className="row">
-                        <div className="col-sm content_padding">
+                        <div className="col-sm-6">
                             <ul className="nav nav-tabs">
-                                <li className="active"><a data-toggle="tab" href="#input_form">Input value</a></li>
+                                <li className="active"><a data-toggle="tab" href="#input_form">Input values</a></li>
                                 <li><a data-toggle="tab" href="#MD_output">MD output</a></li>
+                                <li><a data-toggle="tab" href="#template_list">Templates</a></li>
                             </ul>
-                            <div className="tab-content content_padding">
+                            <div className="tab-content">
                                 <div id="input_form" className="tab-pane fade in active">
-                                    <Form id="input_form" formData={this.state.defaultValues} schema={this.state.schema} onChange={e=>console.log(e.formData)} onSubmit={this.handleSubmit}/>
+                                    <Form id="input_form" formData={this.state.defaultValues} schema={this.state.schema} onChange={this.handleSubmit} onSubmit={this.handleSubmit}/>
                                 </div>
                                 <div id="MD_output" className="tab-pane fade">
                                     <textarea id="readme_out" rows="44" cols="70" value={this.state.readmeOut} onChange={this.handleChange}/>
                                 </div>
+                                <div id="template_list" className="tab-pane fade">
+                                    <div className="card">
+                                        <img width="150px" height="150px" src="https://raw.githubusercontent.com/madushadhanushka/github-readme/main/templates/simple/thumbnail.png" className="card-img-top" alt="..."></img>
+                                        <div className="card-body">
+                                            <p className="card-text">Simple</p>
+                                            <a href="#" className="btn btn-primary">Use this</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
-                        <div className="col-sm">
+                        <div className="col-sm-6">
                             <div id="html_out" dangerouslySetInnerHTML={{__html: this.state.subject}}></div>
                         </div>
                     </div>
                 </div>
-
 
             </div>
         )

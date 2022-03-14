@@ -3,23 +3,17 @@
   text-align: center;
 }
 #html_out {
- width: 600px;
  overflow: auto;
  border: 1px solid #ccc;
- height: 870px;
+ height: 100vh;
  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
  padding: 20px;
 }
 #readme_out {
 	float: left;
+    height: calc(100vh - 62px);
 }
 #input_form {
-    width: 500px;
-    float: left;
-    height: 870px;
+    height: calc(100vh - 80px);
     overflow: auto;
-    margin-right: 10px;
-}
-.content_padding {
-    padding: 10px;
 }
